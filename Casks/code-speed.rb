@@ -5,7 +5,7 @@ cask "code-speed" do
   sha256 "c3caf223d1b0f01faa1b22f8b96677202ab4fbb031b513d317de6647105c63c8"
 
   url "https://github.com/daemonx666/code-speed/releases/download/v#{version}/code-speed-v#{version}-macos-universal.zip"
-  name "code-speed"
+  name "Code Speed"
   desc "Live token speed, usage, cost and quotas of coding agents"
   homepage "https://github.com/daemonx666/code-speed"
 
@@ -16,7 +16,7 @@ cask "code-speed" do
 
   # the app can install its own updates (Settings → System)
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "code-speed.app"
 
@@ -32,7 +32,8 @@ cask "code-speed" do
   ]
 
   caveats <<~EOS
-    code-speed is not notarized yet. If macOS refuses to open it, install with
-      brew install --cask --no-quarantine daemonx666/tap/code-speed
+    Code Speed is not notarized yet. If macOS refuses to open it, allow it in
+    System Settings → Privacy & Security → Open Anyway, or run
+      xattr -dr com.apple.quarantine "#{appdir}/code-speed.app"
   EOS
 end
