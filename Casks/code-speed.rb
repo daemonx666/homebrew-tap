@@ -1,8 +1,8 @@
 # Homebrew cask for code-speed. packaging/render.sh fills in the version
 # and checksum; the release workflow pushes it to daemonx666/homebrew-tap.
 cask "code-speed" do
-  version "0.1.1"
-  sha256 "c3caf223d1b0f01faa1b22f8b96677202ab4fbb031b513d317de6647105c63c8"
+  version "0.1.2"
+  sha256 "54e2bfc44b4a0d6cfa1fea8f68075656b546cb1bf2f1dca8815f985c6a119e94"
 
   url "https://github.com/daemonx666/code-speed/releases/download/v#{version}/code-speed-v#{version}-macos-universal.zip"
   name "Code Speed"
